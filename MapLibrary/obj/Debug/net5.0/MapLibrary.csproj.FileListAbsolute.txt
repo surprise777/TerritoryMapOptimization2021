@@ -1,0 +1,12 @@
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/bin/Debug/net5.0/MapLibrary.deps.json
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/bin/Debug/net5.0/MapLibrary.dll
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/bin/Debug/net5.0/ref/MapLibrary.dll
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/bin/Debug/net5.0/MapLibrary.pdb
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.csproj.AssemblyReference.cache
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.GeneratedMSBuildEditorConfig.editorconfig
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.AssemblyInfoInputs.cache
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.AssemblyInfo.cs
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.csproj.CoreCompileInputs.cache
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.dll
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/ref/MapLibrary.dll
+/Users/isabella/Desktop/work/TerritoryMapOptimization2021/MapLibrary/obj/Debug/net5.0/MapLibrary.pdb
