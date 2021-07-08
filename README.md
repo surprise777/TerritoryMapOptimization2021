@@ -1,2 +1,4 @@
-This is the Ontario Territory Mao Optimization Project.
-Now try to change the depreication notice.
+# Ontario Territory Mao Optimization
+* This is a project about optimizing the Ontario municipility map boundary.
+# Code structure
+* to be defined.
