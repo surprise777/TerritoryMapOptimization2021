@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace MapLibrary
 {
    public class GeoPoint
@@ -79,5 +79,45 @@ namespace MapLibrary
           }
 
     }
+    public class GeoLineGroup{
+        private double id;
+        private List<GeoLine> lines;
+        private double len;
+
+    }
+
+    public class GeoPolygon{
+        private double id;
+        private double area;
+        private double perimeter;
+        private GeoPoint center;
+        private double weight;
+        private GeoLineGroup boundary;
+        private GeoPolygonGroup neighbors;
+        private DVGroup dv;
+
+
+    }
     
+    public class GeoPolygonGroup{
+        private double id;
+        private double area;
+        private double perimeter;
+        private List<GeoPolygon> polygons;
+        private GeoLineGroup boundary;
+        private GeoPolygonGroup edgePolygons;
+        private DVGroup dv;
+    }
+
+    public class DV{
+       private double id;
+       private double value;
+       private string description;
+    }
+
+    public class DVGroup{
+        private double id;
+        private string description;
+        private List<DV> dvList;
+    }
 }
