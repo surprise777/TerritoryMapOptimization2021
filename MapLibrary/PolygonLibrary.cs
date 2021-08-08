@@ -48,7 +48,7 @@ namespace MapLibrary
             get { return neighbors; }
             set { neighbors = value; }
         }
-        public DecisionVarGroup DVs
+        public DecisionVarGroup DecisionVariables
         {
             get { return decisionVar; }
             set { decisionVar = value; }
@@ -78,7 +78,7 @@ namespace MapLibrary
         public GeoPolygon(string pId, GeoLineGroup b)
         {
             id = pId;
-            center = findCenter(b);
+            center = FindCenter(b);
             boundary = b;
             decisionVar = new DecisionVarGroup(pId);
 
@@ -88,7 +88,7 @@ namespace MapLibrary
             id = pId;
             area = a;
             perimeter = p;
-            center = findCenter(b);
+            center = FindCenter(b);
             weight = wt;
             boundary = b;
             decisionVar = new DecisionVarGroup(pId);
@@ -99,7 +99,7 @@ namespace MapLibrary
         /// </summary>
         /// <param name="b">GeoLineGroup => the boundary lines of the poly group</param>
         /// <returns>GeoPoint => the center</returns>
-        public GeoPoint findCenter(GeoLineGroup b)
+        public GeoPoint FindCenter(GeoLineGroup b)
         { //Temp
             double cLat = -1;//TODO
             double cLon = -1;//TODO
@@ -148,7 +148,7 @@ namespace MapLibrary
             get { return edgePolygons; }
             set { edgePolygons = value; }
         }
-        public DecisionVarGroup DecisionVars
+        public DecisionVarGroup DecisionVariables
         {
             get { return decisionVar; }
             set { decisionVar = value; }
@@ -181,35 +181,35 @@ namespace MapLibrary
 
         }
 
-        public void addPolygon(GeoPolygon p)
+        public void AddPolygon(GeoPolygon p)
         {
             polygons.Add(p);
         }
-        public bool removePolygonById(string pId)
+        public bool RemovePolygonById(string pId)
         {
-            GeoPolygon aim = getPolygonById(pId);
+            GeoPolygon aim = GetPolygonById(pId);
             if (aim != null)
             {
                 return polygons.Remove(aim);
             }
             return false;
         }
-        public bool removePolygon(GeoPolygon aim)
+        public bool RemovePolygon(GeoPolygon aim)
         {
             return polygons.Remove(aim);
         }
 
-        public void countBoundary()
+        public void CountBoundary()
         {
             //TODO
         }
-        public void countEdges()
+        public void CountEdges()
         {
             GeoPolygonGroup e = new GeoPolygonGroup();
             //TODO
             edgePolygons = e;
         }
-        public GeoPolygon getPolygonById(string pId)
+        public GeoPolygon GetPolygonById(string pId)
         {
             foreach (GeoPolygon item in polygons)
             {
@@ -219,6 +219,23 @@ namespace MapLibrary
                 }
             }
             return null;
+        }
+        /// <summary>
+        /// return the amount of the holes in this polygon group.
+        /// </summary>
+        /// <returns>int => #holes</returns>
+        public int CountHole()
+        {
+            int num = 0;
+            return num;
+        }
+        /// <summary>
+        /// Return Boolean value to check if the area of the polygon group is continuous.
+        /// </summary>
+        /// <returns>bool => whether the area is not isolated.</returns>
+        public bool IsContiniousArea()
+        {
+            return true;
         }
     }
 }

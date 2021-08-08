@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace MapLibrary
 {
-    public class DecisionVarible
+    public class DecisionVariable
     {
         private string id;
         private Object result;
@@ -12,7 +12,7 @@ namespace MapLibrary
             get { return id; }
             set { id = value; }
         }
-        public Object Result
+        public Object Value
         {
             get { return result; }
             set { result = value; }
@@ -22,15 +22,14 @@ namespace MapLibrary
             get { return description; }
             set { description = value; }
         }
-        public DecisionVarible()
+        public DecisionVariable()
         {
-            ;
         }
-        public DecisionVarible(string dId)
+        public DecisionVariable(string dId)
         {
             id = dId;
         }
-        public DecisionVarible(string dId, Object o)
+        public DecisionVariable(string dId, Object o)
         {
             id = dId;
             result = o;
@@ -41,7 +40,7 @@ namespace MapLibrary
     {
         private string id;
         private string description;
-        private List<DecisionVarible> dvList;
+        private List<DecisionVariable> dvList;
         public string ID
         {
             get { return id; }
@@ -52,24 +51,24 @@ namespace MapLibrary
             get { return description; }
             set { description = value; }
         }
-        public List<DecisionVarible> DVList
+        public List<DecisionVariable> DVList
         {
             get { return dvList; }
             set { dvList = value; }
         }
         public DecisionVarGroup()
         {
-            dvList = new List<DecisionVarible>(1);//Temp
+            dvList = new List<DecisionVariable>(1);//Temp
         }
         public DecisionVarGroup(string gId)
         {
             id = gId;
-            dvList = new List<DecisionVarible>(1);//Temp
+            dvList = new List<DecisionVariable>(1);//Temp
         }
 
-        public DecisionVarible getDecisionVarById(string dId)
+        public DecisionVariable getDecisionVarById(string dId)
         {
-            foreach (DecisionVarible item in dvList)
+            foreach (DecisionVariable item in dvList)
             {
                 if (item.ID == dId)
                 {
@@ -78,20 +77,20 @@ namespace MapLibrary
             }
             return null;
         }
-        public void addDV(DecisionVarible newDV)
+        public void addDV(DecisionVariable newDV)
         {
             dvList.Add(newDV);
         }
         public bool removeDecisionVarById(string dId)
         {
-            DecisionVarible aim = getDecisionVarById(dId);
+            DecisionVariable aim = getDecisionVarById(dId);
             if (aim != null)
             {
                 return dvList.Remove(aim);
             }
             return false;
         }
-        public bool removeDecisionVar(DecisionVarible aim)
+        public bool removeDecisionVar(DecisionVariable aim)
         {
             return dvList.Remove(aim);
         }

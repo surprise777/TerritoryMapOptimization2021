@@ -16,7 +16,7 @@ namespace MapLibrary
             get { return id; }
             set { id = value; }
         }
-        public double Len
+        public double Lenth
         {
             get { return len; }
             set { len = value; }
@@ -36,11 +36,18 @@ namespace MapLibrary
             get { return toPoint; }
             set { toPoint = value; }
         }
+
+        /// <summary>
+        /// Polygon object at left side of the line
+        /// </summary>
         public GeoPolygon LeftPolygon
         {
             get { return leftPolygon; }
             set { leftPolygon = value; }
         }
+        /// <summary>
+        /// Polygon object at right side of the line
+        /// </summary>
         public GeoPolygon RightPolygon
         {
             get { return rightPolygon; }
@@ -49,7 +56,6 @@ namespace MapLibrary
 
         public GeoLine()
         {
-            ;
         }
         public GeoLine(string pID)
         {
@@ -94,9 +100,9 @@ namespace MapLibrary
         /// </summary>
         /// <param name="x1">GeoPoint</param>
         /// <param name="x2">GeoPoint</param>
-        public void setPoints(GeoPoint x1, GeoPoint x2)
+        public void SetPoints(GeoPoint x1, GeoPoint x2)
         {
-            if (x1.Lat <= x2.Lat)
+            if (x1.Latitude <= x2.Latitude)
             {
                 fromPoint = x1;
                 toPoint = x2;
@@ -119,7 +125,7 @@ namespace MapLibrary
             get { return id; }
             set { id = value; }
         }
-        public double Len
+        public double Lenth
         {
             get { return len; }
             set { len = value; }
@@ -140,7 +146,7 @@ namespace MapLibrary
             lines = new List<GeoLine>(1);
         }
 
-        public GeoLine getLineById(string lId)
+        public GeoLine GetLineById(string lId)
         {
             foreach (GeoLine item in lines)
             {
@@ -151,21 +157,21 @@ namespace MapLibrary
             }
             return null;
         }
-        public void addLine(GeoLine newLine)
+        public void AddLine(GeoLine newLine)
         {
             lines.Add(newLine);
             len = len + 1;
         }
-        public bool removeLineById(string lId)
+        public bool RemoveLineById(string lId)
         {
-            GeoLine aim = getLineById(lId);
+            GeoLine aim = GetLineById(lId);
             if (aim != null)
             {
                 return lines.Remove(aim);
             }
             return false;
         }
-        public bool removeLine(GeoLine aim)
+        public bool RemoveLine(GeoLine aim)
         {
             return lines.Remove(aim);
         }
