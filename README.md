@@ -13,3 +13,7 @@
   * DecisionVarLibrary
     * DecisionVariable
     * DecisionVarGroup
+  * TerritoryLibrary
+    * TerritoryPlan
+  * InputLibrary
+    * InputFile
