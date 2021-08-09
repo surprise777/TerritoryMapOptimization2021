@@ -15,7 +15,7 @@
             get { return lat; }
             set { lat = value; }
         }
-        public double Lontitude
+        public double Longitude
         {
             get { return lon; }
             set { lon = value; }

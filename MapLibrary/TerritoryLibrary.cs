@@ -26,7 +26,7 @@ namespace MapLibrary
             get { return totalArea; }
             set { totalArea = value; }
         }
-        public double TotalEdgeLenth
+        public double TotalEdgeLength
         {
             get { return totalEdgeLen; }
             set { totalEdgeLen = value; }

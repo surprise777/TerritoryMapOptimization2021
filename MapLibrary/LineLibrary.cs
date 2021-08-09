@@ -16,7 +16,7 @@ namespace MapLibrary
             get { return id; }
             set { id = value; }
         }
-        public double Lenth
+        public double Length
         {
             get { return len; }
             set { len = value; }
@@ -125,7 +125,7 @@ namespace MapLibrary
             get { return id; }
             set { id = value; }
         }
-        public double Lenth
+        public double Length
         {
             get { return len; }
             set { len = value; }
